@@ -25,4 +25,8 @@ public class Menu extends AppCompatActivity {
         Intent i = new Intent(this, ListaMonumentos.class);
         startActivity(i);
     }
+    public void editarPerfil(View view){
+        Intent i = new Intent(this, EditarPerfil.class);
+        startActivity(i);
+    }
 }
