@@ -21,4 +21,8 @@ public class Menu extends AppCompatActivity {
         Intent i = new Intent(this, Mapa.class);
         startActivity(i);
     }
+    public void listaMonumentos(View view){
+        Intent i = new Intent(this, ListaMonumentos.class);
+        startActivity(i);
+    }
 }
