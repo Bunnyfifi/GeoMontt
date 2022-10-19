@@ -3,19 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/activity_lista_monumentos.xml" value="0.22" />
+        <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/activity_carga.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/activity_lista_monumentos.xml" value="0.25" />
         <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/content_lista_monumentos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_editar_perfil.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_lista_monumentos.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_mapa.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_menu.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_registro.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_test_mapa.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/activity_testnavegacion.xml" value="0.33" />
-        <entry key="..\:/Users/matia/Desktop/proyecto android/app/src/main/res/layout/list_item_monumentos.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Mati/Desktop/GeoMontt/app/src/main/res/layout/list_item_monumentos.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>
