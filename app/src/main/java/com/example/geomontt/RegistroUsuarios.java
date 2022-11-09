@@ -32,7 +32,7 @@ daoUsuario dao;
         btnSalir.setOnClickListener(this);
 
         Bundle b= getIntent().getExtras();
-        id =b.getInt("id");
+        id = b.getInt("id");
         dao = new daoUsuario(this);
         u=dao.getUsuarioById(id);
         nombre.setText(u.getNombre()+" " + u.getApellidos());
