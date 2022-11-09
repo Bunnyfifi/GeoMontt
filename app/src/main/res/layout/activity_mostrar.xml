@@ -11,34 +11,16 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:src="@drawable/geomontt"/>
-    <EditText
-        android:id="@+id/User"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="Usuario"
-        android:layout_weight="1"
-        android:layout_margin="20dp"
-        android:inputType="textEmailAddress"/>
-    <EditText
-        android:id="@+id/Pass"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="Password"
-        android:layout_weight="1"
-        android:layout_margin="20dp"
-        android:inputType="textPassword"/>
-    <Button
-        android:id="@+id/btnEntrar"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Ingresar"
-        android:layout_margin="20dp"/>
-    <Button
-        android:id="@+id/btnRegistrar"
+        android:text="Usuarios registrados"
+        android:gravity="center"/>
+    <ListView
+        android:id="@+id/lista"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Registrar"
-        android:layout_margin="20dp"/>
+        android:layout_weight="0.15"
+        ></ListView>
 </androidx.appcompat.widget.LinearLayoutCompat>
