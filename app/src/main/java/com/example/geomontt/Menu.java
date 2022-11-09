@@ -59,6 +59,7 @@ daoUsuario dao;
                 break;
             case R.id.btnMenuUsuarios:
                 Intent i4 = new Intent(this, RegistroUsuarios.class);
+                i4.putExtra("id", id);
                 startActivity(i4);
                 finish();
                 break;

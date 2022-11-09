@@ -79,6 +79,7 @@ daoUsuario dao;
                 break;
             case R.id.btnSalir:
                 Intent i4 = new Intent(this, Menu.class);
+                i4.putExtra("id", id);
                 startActivity(i4);
                 finish();
                 break;

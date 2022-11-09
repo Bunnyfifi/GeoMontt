@@ -46,7 +46,7 @@ daoUsuario dao;
                 }else if(dao.login(u,p)==1){
                     Usuario ux=dao.getUsuario(u,p);
                     Toast.makeText(this, "Inicio de sesion exitoso", Toast.LENGTH_LONG).show();
-                    Intent i2 = new Intent(this, RegistroUsuarios.class);
+                    Intent i2 = new Intent(this, Menu.class);
                     i2.putExtra("id", ux.getId());
                     startActivity(i2);
                     finish();

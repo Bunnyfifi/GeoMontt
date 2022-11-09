@@ -43,7 +43,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     Toast.makeText(this, "ERROR; CAMPOS VACIOS", Toast.LENGTH_LONG).show();
                 }else if (dao.insertUsuario(u)){
                     Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_LONG).show();
-                    Intent i2 = new Intent(this, Menu.class);
+                    Intent i2 = new Intent(this, RegistroUsuarios.class);
                     startActivity(i2);
                     finish();
                 }else{
