@@ -48,7 +48,7 @@ daoUsuario dao;
                 finish();
                 break;
             case R.id.btnMenuMapa:
-                Intent i2 = new Intent(this, Mapa.class);
+                Intent i2 = new Intent(this, MapsActivity.class);
                 startActivity(i2);
                 finish();
                 break;
