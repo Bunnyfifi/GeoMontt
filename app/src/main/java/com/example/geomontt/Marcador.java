@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 
 public class Marcador {
+
     private String titulo;
     private double latitud,longitud;
 

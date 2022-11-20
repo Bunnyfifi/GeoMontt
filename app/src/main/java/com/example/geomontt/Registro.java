@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
     EditText us, pas, nom, ap;
     Button reg, can;
+    CheckBox rol;
     daoUsuario dao;
 
     @Override
@@ -24,6 +26,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         ap = (EditText) findViewById(R.id.regApellido);
         reg = (Button) findViewById(R.id.btnRegRegistrar);
         can = (Button) findViewById(R.id.btnRegCancel);
+        rol = (CheckBox) findViewById(R.id.regRol);
 
         reg.setOnClickListener(this);
         can.setOnClickListener(this);
@@ -39,6 +42,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 u.setPassword(pas.getText().toString());
                 u.setNombre(nom.getText().toString());
                 u.setApellidos(ap.getText().toString());
+                if(rol.isChecked()){
+                    u.setRol(1);
+                }else{
+                    u.setRol(2);
+                }
                 if(!u.isNull()){
                     Toast.makeText(this, "ERROR; CAMPOS VACIOS", Toast.LENGTH_LONG).show();
                 }else if (dao.insertUsuario(u)){

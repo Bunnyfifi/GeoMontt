@@ -13,7 +13,7 @@ public class    daoUsuario {
     ArrayList<Usuario> lista;
     SQLiteDatabase sql;
     String bd="BDUsuarios";
-    String tabla= "create table if not exists usuario (id integer primary key autoincrement, usuario, pass text, nombre text, ap text)";
+    String tabla= "create table if not exists usuario (id integer primary key autoincrement, usuario, pass text, nombre text, ap text, rol integer)";
 
     public daoUsuario(Context c){
         this.c=c;
@@ -28,6 +28,7 @@ public class    daoUsuario {
         cv.put("pass",u.getPassword());
         cv.put("nombre",u.getNombre());
         cv.put("ap",u.getApellidos());
+        cv.put("rol",u.getRol());
         return (sql.insert("usuario", null,cv)>0);
     }else{
         return false;
@@ -56,6 +57,7 @@ public class    daoUsuario {
                 u.setPassword(cr.getString(2));
                 u.setNombre(cr.getString(3));
                 u.setApellidos(cr.getString(4));
+                u.setRol(cr.getInt(5));
                 lista.add(u);
             }while (cr.moveToNext());
         }
@@ -98,6 +100,7 @@ public class    daoUsuario {
         cv.put("pass",u.getPassword());
         cv.put("nombre",u.getNombre());
         cv.put("ap",u.getApellidos());
+        cv.put("rol",u.getRol());
         return (sql.update("usuario",cv,"id="+u.getId(), null)>0);
 
     }

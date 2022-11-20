@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -74,7 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void mostrarMarcador (View view){
         mMap.clear();
         Marcador m = (Marcador) marcadores.getSelectedItem();
-        punto = new LatLng(m.getLatitud(),m.getLatitud());
+        punto = new LatLng(m.getLatitud(),m.getLongitud());
         mMap.addMarker(new MarkerOptions().position(punto).title(m.getTitulo()));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(punto,17));
     }

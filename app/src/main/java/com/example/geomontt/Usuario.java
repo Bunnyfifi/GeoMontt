@@ -1,17 +1,18 @@
 package com.example.geomontt;
 
 public class Usuario {
-    int Id;
+    int Id, Rol;
     String Nombre, Apellidos, Usuario, Password;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellidos, String usuario, String password) {
+    public Usuario(String nombre, String apellidos, String usuario, String password, int rol) {
         Nombre = nombre;
         Apellidos = apellidos;
         Usuario = usuario;
         Password = password;
+        Rol = rol;
     }
 
     public boolean isNull(){
@@ -30,7 +31,8 @@ public class Usuario {
                 ", Apellidos='" + Apellidos + '\'' +
                 ", Usuario='" + Usuario + '\'' +
                 ", Password='" + Password + '\'' +
-                '}';
+                ", Rol='" + Rol + '\'' +'}';
+
     }
 
     public int getId() {
@@ -71,5 +73,13 @@ public class Usuario {
 
     public void setPassword(String password) {
         Password = password;
+    }
+
+    public int getRol() {
+        return Rol;
+    }
+
+    public void setRol(int rol) {
+        Rol = rol;
     }
 }

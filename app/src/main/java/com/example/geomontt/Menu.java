@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener{
 Button btnMapa, btnMonumentos, btnEditar, btnUsuarios, btnSalir;
@@ -30,6 +31,7 @@ daoUsuario dao;
         btnEditar.setOnClickListener(this);
         btnUsuarios.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
+
         Bundle b= getIntent().getExtras();
         id = b.getInt("id");
         dao = new daoUsuario(this);
@@ -58,11 +60,14 @@ daoUsuario dao;
                 finish();
                 break;
             case R.id.btnMenuUsuarios:
+                if (u.getRol()==1){
                 Intent i4 = new Intent(this, RegistroUsuarios.class);
                 i4.putExtra("id", id);
                 startActivity(i4);
                 finish();
-                break;
+                }else{
+                    Toast.makeText(this, "No cuentas con los permisos para ver estas opciones.", Toast.LENGTH_LONG).show();
+                }break;
             case R.id.btnMenuSalir:
                 Intent i5 = new Intent(this, MainActivity.class);
                 startActivity(i5);

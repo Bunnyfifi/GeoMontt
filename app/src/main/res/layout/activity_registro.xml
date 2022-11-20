@@ -49,6 +49,14 @@
         android:layout_weight="1"
         android:layout_margin="20dp"
         android:inputType="textPersonName"/>
+    <CheckBox
+        android:id="@+id/regRol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:checked="false"
+        android:text="Usuario administrador"/>
     <Button
         android:id="@+id/btnRegRegistrar"
         android:layout_width="match_parent"
