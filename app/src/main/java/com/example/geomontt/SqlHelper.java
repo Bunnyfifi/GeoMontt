@@ -17,7 +17,7 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String marcador = "create table marcador (titulo text primary key, latitud decimal (10,8), longitud decimal (10,8))";
+        String marcador = "create table marcador (titulo text primary key, latitud decimal (10,8), longitud decimal (10,8), descripcion text)";
         sqLiteDatabase.execSQL(marcador);
 
     }
