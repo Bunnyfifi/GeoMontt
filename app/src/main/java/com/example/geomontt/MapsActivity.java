@@ -43,6 +43,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, /* Este codigo es para identificar tu request */ 1);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -51,6 +52,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         titulo = (EditText) findViewById(R.id.titulo);
         marcadores = (Spinner) findViewById(R.id.marcadores);
         guardar = (Button) findViewById(R.id.guardar);
+
     }
 
     @Override
@@ -62,15 +64,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-41.4723143, -72.9395789);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Plaza de armas"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15));
-        mMap.setOnMapLongClickListener((latLng) -> {
-            mMap.clear();
-            punto = latLng;
-            mMap.addMarker(new MarkerOptions().position(punto).title("Nuevo Marcador"));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(punto, 15));
-            titulo.setEnabled(true);
-            guardar.setEnabled(true);
-        });
-        mostrar();
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -93,6 +86,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         };
         int permiso = ContextCompat.checkSelfPermission(MapsActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
+        mMap.setOnMapLongClickListener((latLng) -> {
+            mMap.clear();
+            punto = latLng;
+            mMap.addMarker(new MarkerOptions().position(punto).title("Nuevo Marcador"));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(punto, 15));
+            titulo.setEnabled(true);
+            guardar.setEnabled(true);
+        });
+        mostrar();
+
     }
     public void guardar (View view){
         Marcador marcador = new Marcador(titulo.getText().toString().trim(),punto.latitude, punto.longitude);
