@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.geomontt">
     <uses-permission android:name="android.hardware.location.gps"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Include only if your app benefits from precise location access. -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     
